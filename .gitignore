@@ -3,25 +3,36 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Virtual environment folders
+# Virtual environments
 .venv/
 venv/
 env/
 venv-dash/
 
-# Jupyter Notebook checkpoints (if any)
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# Log files and temp files
+# Logs and temporary files
 *.log
 *.tmp
+*.bak
+*~
 
-# VS Code settings (optional)
+# Editor settings
 .vscode/
+*.swp
 
 # Python egg metadata
 *.egg-info/
+
+# Environment variables
+.env
+.env.*
+
+# Optional: data files (comment this if you're tracking CSVs)
+*.csv
+ data/
