@@ -35,10 +35,7 @@ app.layout = html.Div(
             "borderRadius": "10px", "margin": "auto"
         }),
 
-        dcc.Graph(id="sales-line-chart", style={"marginTop": "40px"}),
-
-        html.P("🔴 Red dashed line marks the Pink Morsel price increase on Jan 15, 2021.",
-               style={"textAlign": "center", "fontStyle": "italic", "color": "#555"})
+        dcc.Graph(id="sales-line-chart", style={"marginTop": "40px"})
     ],
     style={"fontFamily": "Arial, sans-serif", "backgroundColor": "#fff0f5", "padding": "20px"}
 )
@@ -68,28 +65,12 @@ def update_chart(selected_region):
         markers=True
     )
 
-    fig.update_traces(line=dict(color="#BF81E8", width=2.5))  # hot pink and thicker line
-
-    # Add red dashed line for Jan 15, 2021
-    fig.add_shape(
-        type="line",
-        x0="2021-01-15", x1="2021-01-15",
-        y0=0, y1=sales_by_date["sales"].max(),
-        line=dict(color="red", dash="dash")
-    )
-
-    fig.add_annotation(
-        x="2021-01-15",
-        y=sales_by_date["sales"].max(),
-        text="Price Increase",
-        showarrow=True,
-        arrowhead=1,
-        ax=0,
-        ay=-40
-    )
+    fig.update_traces(line=dict(color="#BF81E8", width=2.5))  # purple line
 
     return fig
 
 # Run
 if __name__ == '__main__':
     app.run(debug=True)
+
+
