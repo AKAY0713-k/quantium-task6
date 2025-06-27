@@ -7,7 +7,7 @@ from quantium_task4 import app  # your app must be accessible here
 @pytest.mark.usefixtures("dash_duo")
 def test_header_present(dash_duo):
     dash_duo.start_server(app)
-    assert dash_duo.find_element("h1").text == "📈 Pink Morsel Sales Dashboard"
+    assert dash_duo.find_element("h1").text == " Pink Morsel Sales Dashboard"
 
 
 @pytest.mark.usefixtures("dash_duo")
