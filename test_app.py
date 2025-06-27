@@ -22,3 +22,5 @@ def test_region_picker_present(dash_duo):
     dash_duo.start_server(app)
     radio = dash_duo.find_element("#region-radio")
     assert radio is not None  # ensures the RadioItems component is present
+
+
